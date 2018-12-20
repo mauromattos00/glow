@@ -1,3 +1,11 @@
 <div class="new-task">
-  <input type="text" class="new-task__input" placeholder="Save the world from the cats">
+
+  <input type="text" class="new-task__input"
+  placeholder="Save the world from the cats"
+  [(ngModel)]="taskText"
+  (keydown.enter)="addTask()">
+
+  <button class="new-task__btn" (click)="addTask()">
+    <i class="fa fa-arrow-right new-task__btn-icon"></i>
+  </button>
 </div>

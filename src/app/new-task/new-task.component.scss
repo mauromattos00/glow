@@ -2,7 +2,6 @@
 
 .new-task {
 
-  width: 100%;
   display: flex;
   justify-content: center;
 
@@ -13,20 +12,94 @@
     width: 515px;
     outline: none;
     color: $black;
-    font-size: 1.4rem;
-    background: #fff;
+    font-size: 1.2rem;
     padding: 10px 20px;
-    border-radius: 10px;
-    transition: all .25s ease-in-out;
+    background: $white-smoke;
+    border-top-left-radius: 8px;
     border: 2px solid $ocean-blue;
-    box-shadow: 5px 5px 16px 0px rgb(0, 0, 0);
+    border-right: none;
+    border-bottom-left-radius: 8px;
+    transition: all .25s ease-in-out;
+    box-shadow: 5px 5px 16px 0px $black;
     
     &:focus {
       box-shadow: 1px 0px 12px 1px rgba(255, 255, 255, .4);
     }
 
     &::placeholder {
-      color: #c2c2c2;
+      color: $ocean-blue;
+      opacity: 0.25;
+    }
+  }
+
+  &__btn {
+    z-index: 2;
+    cursor: pointer;
+    padding: 0 25px;
+    border-left: none;
+    font-size: 1.2rem;
+    color: $white-smoke;
+    background: $ocean-blue;
+    border-top-right-radius: 8px;
+    border: 2px solid $ocean-blue;
+    transition: all .25s ease-out;
+    border-bottom-right-radius: 8px;
+
+    &:hover {
+      background: $purple-plum;
+      // border: 2px solid $purple-plum;
+    }
+
+    & > i {
+      transition: all .25s ease-out;
+    }
+    
+    &:hover > i {
+      background: $purple-plum;
+      color: $white-smoke;
+    }
+  }
+
+  &__btn-icon {
+    background: $ocean-blue;
+  }
+}
+
+@media(max-width: 615px) {
+  .new-task {
+    &__input {
+      width: 400px;
+      font-size: 1rem;
+    }
+  }
+}
+
+@media(max-width: 500px) {
+  .new-task {
+    &__input {
+      width: 320px;
+      font-size: 1rem;
+    }
+  }
+}
+
+@media(max-width: 415px) {
+  .new-task {
+    &__input {
+      width: 280px;
+    }
+  }
+}
+
+@media(max-width: 360px) {
+  .new-task {
+    &__input {
+      width: 225px;
+      font-size: 0.9rem;
+    }
+
+    &__btn {
+      padding: 0 10px;
     }
   }
 }
