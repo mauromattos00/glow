@@ -1,27 +1,24 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
-
-// ngRx
-import { StoreModule } from '@ngrx/store';
-import { reducer } from './store/reducer';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 // Components
-import { ToDoListComponent } from './to-do-list/to-do-list.component';
+import { TaskListComponent } from './task-list/task-list.component';
 import { NewTaskComponent } from './new-task/new-task.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ToDoListComponent,
+    TaskListComponent,
     NewTaskComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StoreModule.forRoot({todo: reducer})
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

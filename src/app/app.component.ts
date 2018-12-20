@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-// ngRx
-import { Store, select } from '@ngrx/store';
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -10,12 +7,13 @@ import { Store, select } from '@ngrx/store';
 })
 export class AppComponent implements OnInit {
 
-  public tasks: any[];
-  title = 'todos';
+  public tasks = [];
 
-  constructor(private store: Store<any>) {}
+  constructor() {}
 
-  ngOnInit() {
-    this.store.select('tasks').subscribe((state => this.tasks = state));
+  ngOnInit() { }
+
+  addTaskToList(task: string): void {
+    this.tasks.push(task);
   }
 }
