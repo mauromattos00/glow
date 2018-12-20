@@ -1,0 +1,45 @@
+@import './../../assets/scss/layout.vars';
+
+.task-list {
+  width: 585px;
+  transition: all .25s ease-in-out;
+
+  &__item {
+    display: flex;
+    color: $black;
+    min-height: 45px;
+    border-radius: 8px;
+    padding: 8px 15px;
+    align-items: center;
+    text-align: justify;
+    margin-bottom: 15px;
+    background: $white-smoke;
+    text-justify: inter-ideograph;
+    box-shadow: 1px 1px 10px 1px rgba(82, 67, 198, 0.5);
+  }
+
+}
+
+@media(max-width: 615px) {
+  .task-list {
+    width: 465px;
+  }
+}
+
+@media(max-width: 500px) {
+  .task-list {
+    width: 385px;
+  }
+}
+
+@media(max-width: 415px) {
+  .task-list {
+    width: 350px;
+  }
+}
+
+@media(max-width: 360px) {
+  .task-list {
+    width: 260px;
+  }
+}
