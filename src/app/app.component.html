@@ -1,7 +1,14 @@
 
 <section class="title-section">
-  <h1 class="title-section__text">todos<span class="title-section__prompt">|</span></h1>
+  <h1 class="title-section__text">to.dos<span class="title-section__prompt">|</span></h1>
 </section>
 <section class="new-task-form">
-  <app-new-task></app-new-task>
+  <app-new-task
+    (addTextEvent)="addTaskToList($event)">
+  </app-new-task>
+</section>
+<section class="task-list">
+  <app-task-list
+    [taskList]="tasks">
+  </app-task-list>
 </section>
