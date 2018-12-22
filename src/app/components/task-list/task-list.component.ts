@@ -1,5 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 
+import { Store } from '@ngrx/store';
+import { AppState } from '../../store/reducers';
+
 @Component({
   selector: 'app-task-list',
   templateUrl: './task-list.component.html',
@@ -9,9 +12,8 @@ export class TaskListComponent implements OnInit {
 
   @Input() taskList: string[];
 
-  constructor() { }
+  constructor(private store: Store<AppState>) {}
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
 }
